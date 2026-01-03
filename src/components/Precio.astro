@@ -1,0 +1,35 @@
+---
+// Sección Precio
+const telefono = '+56912345678';
+const whatsappLink = `https://wa.me/${telefono.replace('+', '')}?text=Hola,%20quiero%20cotizar`;
+---
+
+<section class="py-16 bg-primary-600">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center text-white">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Precio Transparente</h2>
+      <div class="bg-white/10 backdrop-blur rounded-2xl p-8 mb-8">
+        <div class="text-6xl md:text-7xl font-extrabold mb-2">$25.000</div>
+        <p class="text-xl text-primary-100">Precio base por reparación de trizadura</p>
+        <p class="text-sm text-primary-200 mt-2">*El precio final depende del tamaño y tipo de daño</p>
+      </div>
+      <ul class="text-left max-w-md mx-auto space-y-3 mb-8">
+        <li class="flex items-center gap-3">
+          <span class="text-green-400">✓</span> Incluye materiales de primera calidad
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="text-green-400">✓</span> Traslado a domicilio sin costo extra
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="text-green-400">✓</span> Garantía por la reparación
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="text-green-400">✓</span> Pago al finalizar (efectivo o transferencia)
+        </li>
+      </ul>
+      <a href={whatsappLink} target="_blank" class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold text-lg px-8 py-4 rounded-xl transition-all">
+        Cotizar mi Reparación
+      </a>
+    </div>
+  </div>
+</section>

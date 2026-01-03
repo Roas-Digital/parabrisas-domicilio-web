@@ -1,0 +1,32 @@
+---
+// Sección Tipos de Daños
+const tipos = [
+  { nombre: 'Trizadura estrella', descripcion: 'Impacto con forma de estrella', reparable: true },
+  { nombre: 'Trizadura ojo de buey', descripcion: 'Impacto circular pequeño', reparable: true },
+  { nombre: 'Trizadura lineal', descripcion: 'Grieta en línea recta corta', reparable: true },
+  { nombre: 'Trizadura combinada', descripcion: 'Mezcla de diferentes tipos', reparable: true },
+  { nombre: 'Grieta larga (+15cm)', descripcion: 'Grietas extensas', reparable: false },
+  { nombre: 'Daño en borde', descripcion: 'Daño que llega al borde', reparable: false }
+];
+---
+
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">¿Qué daños reparamos?</h2>
+      <p class="text-lg text-gray-600">La mayoría de las trizaduras pueden repararse si se tratan a tiempo</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      {tipos.map((tipo) => (
+        <div class={`p-6 rounded-xl border-2 ${tipo.reparable ? 'border-green-200 bg-green-50' : 'border-red-200 bg-red-50'}`}>
+          <h3 class="font-semibold text-gray-900">{tipo.nombre}</h3>
+          <p class="text-sm text-gray-600 mt-1">{tipo.descripcion}</p>
+          <span class={`text-xs font-medium mt-2 inline-block ${tipo.reparable ? 'text-green-700' : 'text-red-700'}`}>
+            {tipo.reparable ? '✓ Reparable' : '✗ Requiere reemplazo'}
+          </span>
+        </div>
+      ))}
+    </div>
+    <p class="text-center text-gray-500 mt-8">¿No estás seguro? Envíanos una foto y te decimos gratis si es reparable.</p>
+  </div>
+</section>

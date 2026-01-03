@@ -1,0 +1,28 @@
+---
+// Sección Cobertura RM
+const comunas = [
+  'Santiago Centro', 'Providencia', 'Las Condes', 'Vitacura', 'Lo Barnechea',
+  'Ñuñoa', 'La Reina', 'Peñalolén', 'Macul', 'La Florida',
+  'Puente Alto', 'San Bernardo', 'Maipú', 'Pudahuel', 'Cerrillos',
+  'Estación Central', 'Quinta Normal', 'Recoleta', 'Independencia', 'Huechuraba'
+];
+---
+
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Cobertura en toda la Región Metropolitana</h2>
+      <p class="text-lg text-gray-600">Llegamos a tu comuna en 30 minutos o menos</p>
+    </div>
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-wrap justify-center gap-2">
+        {comunas.map((comuna) => (
+          <span class="bg-white px-3 py-1.5 rounded-full text-sm text-gray-700 border border-gray-200 hover:border-primary-300 hover:bg-primary-50 transition-colors">
+            {comuna}
+          </span>
+        ))}
+      </div>
+      <p class="text-center text-gray-500 mt-6 text-sm">¿Tu comuna no aparece? Consúltanos, probablemente también llegamos.</p>
+    </div>
+  </div>
+</section>

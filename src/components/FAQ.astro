@@ -1,0 +1,37 @@
+---
+// Sección FAQ - Preguntas frecuentes
+const faqs = [
+  { pregunta: '¿Cuánto cuesta reparar un parabrisas?', respuesta: 'El precio base es de $25.000 por reparación de trizadura. El costo final depende del tamaño y tipo de daño.' },
+  { pregunta: '¿Cuánto demora la reparación?', respuesta: 'La reparación toma entre 20 y 40 minutos dependiendo del tipo de daño.' },
+  { pregunta: '¿En cuánto tiempo llegan?', respuesta: 'Llegamos en aproximadamente 30 minutos a cualquier punto de la RM.' },
+  { pregunta: '¿La reparación es segura?', respuesta: 'Sí, utilizamos resinas de alta calidad que restauran la integridad estructural del vidrio.' },
+  { pregunta: '¿Se nota la reparación después?', respuesta: 'Una reparación profesional reduce la visibilidad del daño en un 80-90%.' },
+  { pregunta: '¿Qué tipos de daños pueden repararse?', respuesta: 'Reparamos trizaduras tipo estrella, ojo de buey, media luna y grietas menores a 15cm.' },
+  { pregunta: '¿Tienen garantía?', respuesta: 'Sí, ofrecemos garantía por nuestra reparación.' },
+  { pregunta: '¿Qué formas de pago aceptan?', respuesta: 'Aceptamos efectivo, transferencia bancaria y tarjetas.' },
+  { pregunta: '¿Trabajan fines de semana?', respuesta: 'Sí, atendemos de lunes a sábado de 8:00 a 20:00 hrs.' },
+  { pregunta: '¿Sirve para pasar la revisión técnica?', respuesta: 'Sí, una reparación profesional permite pasar la revisión técnica.' }
+];
+---
+
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2>
+      <p class="text-lg text-gray-600">Todo lo que necesitas saber sobre nuestro servicio</p>
+    </div>
+    <div class="max-w-3xl mx-auto space-y-4">
+      {faqs.map((faq) => (
+        <details class="group bg-gray-50 rounded-xl">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-semibold text-gray-900 hover:text-primary-600">
+            <span>{faq.pregunta}</span>
+            <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600">{faq.respuesta}</div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+---
+// Sección Beneficios
+const beneficios = [
+  { icon: '🏠', titulo: 'Servicio a Domicilio', descripcion: 'Vamos donde estés: casa, oficina, estacionamiento.' },
+  { icon: '⚡', titulo: 'Rápido y Express', descripcion: 'Llegamos en 30 minutos. Reparación en 20-40 min.' },
+  { icon: '💰', titulo: 'Precio Justo', descripcion: 'Desde $25.000. Sin costos ocultos.' },
+  { icon: '✅', titulo: 'Garantía Total', descripcion: 'Garantizamos nuestro trabajo.' }
+];
+---
+
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">¿Por qué elegirnos?</h2>
+      <p class="text-lg text-gray-600">Olvidate de perder horas en un taller. Nosotros llegamos a ti.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {beneficios.map((b) => (
+        <div class="text-center p-6 rounded-2xl bg-gray-50 hover:bg-primary-50 transition-colors">
+          <div class="text-4xl mb-4">{b.icon}</div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">{b.titulo}</h3>
+          <p class="text-gray-600">{b.descripcion}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

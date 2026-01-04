@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git pull:*)",
+      "Bash(npm install)",
+      "Bash(wait)",
+      "Bash(kill:*)",
+      "Bash(rm:*)",
+      "Bash(pkill:*)",
+      "Bash(npm run dev:*)",
+      "Bash(cat:*)",
+      "Bash(npx astro dev)",
+      "Bash(npm ci:*)",
+      "Bash(explorer.exe \"http://localhost:4321\")",
+      "Bash(cmd.exe /c start http://localhost:4321)",
+      "Bash(npx @astrojs/upgrade)",
+      "Bash(npm install:*)",
+      "Bash(tee:*)",
+      "Bash(npm audit:*)"
+    ]
+  }
+}
